@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="nav-wrap">
+        <div class="avatar-wrap">
+          <img src="image/cheska.jpg" alt="profile" class="avatar">
+        </div>
+        <nav>
+          <ul>
+            <li><button class="nav-btn" data-target="#home">Home</button></li>
+            <li><button class="nav-btn" data-target="#hobbies">Hobbies</button></li>
+            <li><button class="nav-btn" data-target="#activities">Activities</button></li>
+            <li><button class="nav-btn" data-target="#contact">Contact</button></li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <main class="main">
+      <section id="home" class="hero">
+        <div class="hero-left">
+          <h2>Hello I'm</h2>
+          <h1 class="name">Cheska<br>Manzano</h1>
+          <p class="section">Section 2-B</p>
+          <p class="role">BSIT <span class="accent">Student</span></p>
+        </div>
+        <div class="hero-photo">
+          <img src="image/mee.jpg" alt="profile big" class="profile-big">
+        </section>
+        <section id="hobbies" class="content-section">
+            <h2 class="section-title">My <span class="accent">Hobbies</span></h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Travel</h3>
+                    <img src="image/Travel.jpg" alt="Travel" style="width:100%; height:auto; object-fit:cover;">
+                </div>
+                <div class="card">
+                    <h3>Dancing</h3>
+                    <img src="image/dancing.webp" alt="dancing" style="width:100%; height:auto; object-fit:cover;">
+                </div>
+            </div>
+        </section>
+        <section id="activities" class="content-section">
+            <h2 class="section-title">My <span class="accent">Activities</span></h2>
+            <div class="activities-grid">
+                <article class="activity">
+                    <h4>Activity 1</h4>
+                    <img src="image/Screenshot 2025-10-04 171311.png" alt="Student Council" class="activity-img" style="width:100%; height:auto; object-fit:cover; cursor:pointer;" onclick="toggleActivityContent('activity1-content')">
+                    <div id="activity1-content" class="activity-content" style="display:none;">
+                        <p>Activity 1</p>
+                    </div>
+                </article>
+                <article class="activity">
+                    <h4>Group Report</h4>
+                    <img src="image/Group Report.jfif" alt="Community Cleanup" class="activity-img" style="width:100%; height:auto; object-fit:cover; cursor:pointer;" onclick="toggleActivityContent('activity2-content')">
+                    <div id="activity2-content" class="activity-content" style="display:none;">
+                        <p>Group Report</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <script>
+          function toggleActivityContent(id) {
+            var el = document.getElementById(id);
+            el.style.display = el.style.display === 'none' ? 'block' : 'none';
+          }
+        </script>
+      <section id="contact" class="content-section contact-section">
+        <h2 class="section-title">Get in <span class="accent">Touch</span></h2>
+        <div class="contact-card">
+          <p>Email: <a href="mailto:cheskamanzano283@gmail.com">cheskamanzano283@gmail.com</a></p>
+          <p>Phone: <a href="tel:+09367150619">+09367150619</a></p>
+          <div class="socials">
+            <a href="#" class="btn-social">Instagram</a>
+            <a href="#" class="btn-social">@whos_mxea</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
